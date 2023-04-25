@@ -1,0 +1,9 @@
+$bgColor_base     : #ffffff;
+$bgColor_main     : #6d3421;
+
+$textColor_base   : #333333;
+
+$breakpoints      : (
+            iPhone:  "only screen and (max-width:768px)",
+            mac   :  "only screen and (min-width:769px)",
+);

@@ -1,0 +1,17 @@
+@use "./variable" as *;
+@use "./function" as *;
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints,$breakpoint)} {
+        @content;
+    }
+}
+
+@include media(mac){
+	html {
+		font-size: rootFz();
+	}
+}
+html {
+    font-size: rootFz(320px);
+}
