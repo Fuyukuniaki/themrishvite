@@ -39,6 +39,7 @@ function themrishvite_theme_support() {
 	add_theme_support( 'editor-styles' );
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'menus' );
 	register_nav_menus( array (
 		'main-menu' => __( 'mainmenu', 'themrishvite' )
 	) );
@@ -52,6 +53,9 @@ add_action( 'send_headers', 'cors_http_header' );
 
 
 add_action( 'wp_enqueue_scripts', function() {
+
+	wp_enqueue_style( 'ress', '//unpkg.com/modern-css-reset/dist/reset.min.css', array() );
+
 	if ( defined( 'IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true ) {
 		//develop mode
 		function vite_head_module_hook() {
@@ -60,7 +64,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		add_action( 'wp_footer', 'vite_head_module_hook' );
 	} else {
 		// production mode, 'npm run build' must be executed in order to generate assets
-
+		
 		// read manifest.json to figure out what to enqueue
 		$manifest = json_decode( file_get_contents( DIST_PATH . '/manifest.json'), true );
 		
@@ -82,4 +86,5 @@ add_action( 'wp_enqueue_scripts', function() {
 			}
 		}
 	}
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/styles/style.css', array(), '1.0.0' );
 } );

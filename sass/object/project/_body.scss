@@ -1,0 +1,8 @@
+@use "../../foundation/function" as *;
+@use "../../foundation/variable" as *;
+
+
+.p-body {
+	color: $textColor_base;
+	font-size: calcFz(14);
+}

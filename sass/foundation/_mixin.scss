@@ -12,6 +12,8 @@
 		font-size: rootFz();
 	}
 }
-html {
-    font-size: rootFz(320px);
+@include media(iPhone){
+	html {
+		font-size: rootFz(320px);
+	}
 }

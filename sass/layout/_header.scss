@@ -1,0 +1,17 @@
+@use "../foundation/function" as *;
+@use "../foundation/variable" as *;
+
+.l-header .menu {
+	display: flex;
+	flex-flow: row nowrap;
+}
+.l-header .menu > :first-child {
+	margin-right: auto;
+}
+.l-header .menu > .menu-item > a {
+	color: $textColor_base;
+	font-size: calcFz(14);
+	line-height: mulchVw(20);
+	padding: mulchVw(10);
+	margin: 0 mulchVw(10);
+}

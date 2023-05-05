@@ -1,8 +1,5 @@
 <?php get_header(); ?>
 	<main class="l-main p-front-page">
-		<section class="p-front-page__main-visual">
-			<h2 class="c-front-page__main-visual--text">好きな仕事を<br>好きな人と好きな人のために</h2>
-		</section>
 		<article class="p-front-page__parts">
 			<h3 class="c-front-page__header">Bugについて</h3>
 			<p class="c-front-page__text">当店のこだわりは、お客様に最高品質のバイクとバイク雑貨を提供することです。私たちは、長年にわたって蓄積された経験と知識を活かし、お客様に満足していただけるような製品を厳選して取り扱っています。バイクに関しては私たちは最高品質のメーカーのみを扱い......</p>

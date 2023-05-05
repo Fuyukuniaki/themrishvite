@@ -1,0 +1,17 @@
+@use "../foundation/function" as *;
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+
+.l-main {
+	display: flex;
+	flex-flow: column wrap;
+	@include media(mac){
+		width: mulchVw(920);
+		min-width: 920px;
+	}
+	@include media(iPhone){
+		width: mulchVw(280);
+		min-width: 280px;
+	}	
+}
